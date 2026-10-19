@@ -5,20 +5,20 @@ erDiagram
 
     USER ||--|{ TRANSAKSI: "melakukan (pengirim)"
     USER ||--|{ TRANSAKSI: "menerima (penerima)"
-    USER ||--|{ TOP-UP: melakukan
+    USER ||--|{ TOP_UP: melakukan
 
     TRANSAKSI {
         int id_transaksi PK
-        int id_user FK
+        int id_pengirim FK
         int id_penerima FK
-        int jumlah_transaksi
+        int nominal_transaksi
         string status
         date tanggal_transaksi
     }
-    TOP-UP {
+    TOP_UP {
         int id_top-up PK
-        int norek_user FK
-        int jumlah_topup
+        int id_user FK
+        int nominal_topup
         date tanggal_topup
     }
     USER {
