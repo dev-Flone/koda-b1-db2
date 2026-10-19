@@ -9,10 +9,8 @@ erDiagram
 
     TRANSAKSI {
         int id_transaksi PK
-        int norek_user FK
-        int norek_penerima FK
-        string nama_pengirim
-        string nama_penerima
+        int id_user FK
+        int id_penerima FK
         int jumlah_transaksi
         string status
         date tanggal_transaksi
@@ -25,7 +23,8 @@ erDiagram
     }
     USER {
         int id_user PK
-        int norek_user PK
+        int norek_user FK
+        string nama_user
         int saldo
     }
 
